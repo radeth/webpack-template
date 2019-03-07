@@ -1,6 +1,6 @@
-#webpack configuration
+# webpack configuration
 
-#TODS's
+# TODS's
 - build
 - devServer
 - plugins
