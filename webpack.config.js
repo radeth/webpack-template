@@ -1,12 +1,22 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+var path = require("path")
 
 module.exports = {
-  entry: './src/index.js',
+  mode: 'development',
+  entry: './src/js/index.js',
   output: {
-    path: __dirname + '/dist',
+    path: path.resolve(__dirname, "dist"),
+    filename: "main.js",
+    publicPath: "/"
+  },
+  devServer: {
     filename: 'main.js'
   },
-  plugins: [
-    new HtmlWebpackPlugin()
-  ]
+  devtool: 'inline-source-map',
+  module:{
+    test:/.css$/,
+    use:[
+      'style-loader',
+      'css-loader'
+    ]
+  }
 }
