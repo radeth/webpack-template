@@ -1,5 +1,4 @@
 var path = require("path")
-
 module.exports = {
   mode: 'development',
   entry: './src/js/index.js',
@@ -12,11 +11,25 @@ module.exports = {
     filename: 'main.js'
   },
   devtool: 'inline-source-map',
-  module:{
-    test:/.css$/,
-    use:[
-      'style-loader',
-      'css-loader'
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      },
+      {
+        test:/\.scss$/,
+        use: [
+          'style-loader',
+          'sass-loader'
+        ]
+      }
     ]
   }
 }
