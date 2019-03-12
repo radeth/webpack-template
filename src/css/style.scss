@@ -1,4 +1,7 @@
 @import  "./settings";
+body{
+  background-color: gray;
+}
 #randomInt {
     background-color: $main;
     border: 1px solid black;
