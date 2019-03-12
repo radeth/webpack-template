@@ -24,12 +24,13 @@ module.exports = {
         }
       },
       {
-        test:/\.scss$/,
+        test: /\.scss$/,
         use: [
-          'style-loader',
-          'sass-loader'
+            "style-loader", 
+            "css-loader", 
+            "sass-loader"
         ]
-      }
+    }
     ]
   }
 }

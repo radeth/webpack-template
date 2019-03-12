@@ -1,4 +1,4 @@
-import '../css/main.scss';
+import '../css/style.scss';
 import { RandomGenerator } from './RadndomGenerator';
 
 const outputParagraph = document.querySelector('#outputParagraph');
