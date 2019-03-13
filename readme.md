@@ -1,5 +1,5 @@
 # webpack configuration
 
 # TODS's
-- bootstap jquery
+- bootstap 
 - deploy
